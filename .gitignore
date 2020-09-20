@@ -1,0 +1,10 @@
+# Folders
+/build 
+
+# Extensiones 
+
+*.aux 
+*.fdb_latexmk
+*.log 
+*.pdf
+*.synctex.gz

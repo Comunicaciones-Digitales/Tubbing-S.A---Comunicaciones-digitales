@@ -9,7 +9,7 @@
 \title{Tubbing S.A \\ \small{Comunicaciones digitales} \\ \small{Universidad Nacional del Comahue} }
 \author{ 
         Gatica, Isaias \\ \small{email:...} \and 
-        Millain, Gonzalo \\ \small{email:...} \and
+        Millain, Gonzalo \\ \small{gonza.pm@outlook.com} \and
         Saez, Lautaro Andres \\ \small{email:...} 
 
 }
@@ -17,4 +17,60 @@
 
 \begin{document}
     \maketitle
-\end{document}
+    \section*{Generalidades}
+    
+        \begin{itemize}
+
+        \item [Alquiler de servidor remoto] 
+            
+        Para propósitos generales de la empresa      (presupuestos y clientes,correo electrónico, archivos de seguridad, etc.)\footnote{https://www.hostdime.com.ar/servidores-dedicados}
+            
+        \item [Seguimiento de flota de camiones] 
+            
+        \footnote{https://galileosatelital.com/rastreo-vehicular-gps/?gclid=CjwKCAjw5Kv7BRBSEiwAXGDEla2G8TL0aFsWB259-qAPyI0V45NeJgmpYn7klKIzC0TCTSIzWa4ZWhoCXh0QAvD_BwE}
+            
+        \item [Sistemas de cámaras de vigilancia] %Tercerizar?NO. En este caso se dedicara un sector de la LAN (en cada edificio) a la conexion entre las camaras y el DVR.
+            
+        \item [Red de telefonía IP] %Definir
+        
+        \item [Seguridad] %Proxy o vpn? %Bloqueo de paginas o limitacion de ancho de banda en computadoras cliente \footnote{https://blog.mdcloud.es/proxyweb-que-es-y-como-protege-a-mi-empresa/}
+            
+        \end{itemize}
+    
+    
+    \section*{Neuquen - Parque industrial}
+        \begin{itemize}
+        \item[LAN] %Separar sectores por medio de hub
+        Se separa cada uno de los sectores de la siguiente forma. Sector de oficinas por medio de una red por cable. %Sector de laboratorio y conexion de sistema scada
+        
+        \item[WAN] El servidor principal para que se conecten todas las oficinas. Proveedor (ISP)
+        
+        \end{itemize}
+
+    \section*{Rincón de los Sauces - Parque industrial}
+        \begin{itemize}
+        \item[LAN] %Separar sectores por medio de hub
+            
+        \item[WAN] %Definir ISP
+
+        \end{itemize}
+
+    \section*{Neuquén - Oficinas comerciales}
+        \begin{itemize}
+        
+        \item[LAN] Una red inalámbrica por sector de oficinas. Se dedicara una red cableada en el sector de gerencia.
+        
+        \item[WAN] %Definir ISP
+
+        \end{itemize}
+
+    \section*{Bahía Blanca - Centro de logística}
+        \begin{itemize}
+        
+        \item[LAN] Una red cableada para el sector de oficina.%Definir el alcance de la red de camaras
+        
+        \item[WAN] %Definir ISP
+
+        \end{itemize}
+
+    \end{document}

@@ -6,71 +6,68 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 
+\usepackage{vmargin}
+\usepackage{hyperref}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{1.5cm}                        % margen superior
+{16.5cm}                      % anchura del texto
+{23.42cm}                    % altura del texto
+{10pt}                           % altura de los encabezados
+{1cm}                           % espacio entre el texto y los encabezados
+{0pt}                             % altura del pie de página
+{2cm}      
+
+
 \title{Tubbing S.A \\ \small{Comunicaciones digitales} \\ \small{Universidad Nacional del Comahue} }
 \author{ 
-        Gatica, Isaias \\ \small{email:...} \and 
+        Gatica, Isaias \\ \small{LautaroAndresSaez@gmail.com} \and 
         Millain, Gonzalo \\ \small{gonza.pm@outlook.com} \and
-        Saez, Lautaro Andres \\ \small{email:...} 
+        Saez, Lautaro Andres \\ \small{IsaiasGatica1@gmail.com} 
 
 }
 \date{}
 
 \begin{document}
     \maketitle
-    \section*{Generalidades}
+    \section{Generalidades}
     
-        \begin{itemize}
+        \subsection{Estructuras de redes}
 
-        \item [Alquiler de servidor remoto] 
-            
-        Para propósitos generales de la empresa      (presupuestos y clientes,correo electrónico, archivos de seguridad, etc.)\footnote{https://www.hostdime.com.ar/servidores-dedicados}
-            
-        \item [Seguimiento de flota de camiones] 
-            
-        \footnote{https://galileosatelital.com/rastreo-vehicular-gps/?gclid=CjwKCAjw5Kv7BRBSEiwAXGDEla2G8TL0aFsWB259-qAPyI0V45NeJgmpYn7klKIzC0TCTSIzWa4ZWhoCXh0QAvD_BwE}
-            
-        \item [Sistemas de cámaras de vigilancia] %Tercerizar?NO. En este caso se dedicara un sector de la LAN (en cada edificio) a la conexion entre las camaras y el DVR.
-            
-        \item [Red de telefonía IP] %Definir
-        
-        \item [Seguridad] %Proxy o vpn? %Bloqueo de paginas o limitacion de ancho de banda en computadoras cliente \footnote{https://blog.mdcloud.es/proxyweb-que-es-y-como-protege-a-mi-empresa/}
-            
-        \end{itemize}
-    
-    
-    \section*{Neuquen - Parque industrial}
-        \begin{itemize}
-        \item[LAN] %Separar sectores por medio de hub
-        Se separa cada uno de los sectores de la siguiente forma. Sector de oficinas por medio de una red por cable. %Sector de laboratorio y conexion de sistema scada
-        
-        \item[WAN] El servidor principal para que se conecten todas las oficinas. Proveedor (ISP)
-        
-        \end{itemize}
+        \subsubsection*{LAN}
 
-    \section*{Rincón de los Sauces - Parque industrial}
-        \begin{itemize}
-        \item[LAN] %Separar sectores por medio de hub
-            
-        \item[WAN] %Definir ISP
+        Cada area tendra su propia red LAN, la cual mas adelante se definira si sera por cable o WiFi dependiendo de las 
+        prestaciones necesarias para cada lugar. Como primer medida adoptaremos el protocolo Ethernet por ser el mas utilizado.
 
-        \end{itemize}
+        \subsubsection*{WAN}
 
-    \section*{Neuquén - Oficinas comerciales}
-        \begin{itemize}
+        Se tendra una red WAN que realize una interconexión entre todas las areas con la central que estara ubicada en Parque Industrial.
+        Esto permitira mediante una red Proxy/VPN facilitando el teletrabajo.
+
+        \subsubsection*{Seguridad}
+
+        Para aumnetar la seguridad de la red WAN/LAN y tener un mayor control del uso de la red y quienes usan dicha red 
+        se decide implementar un servidor Proxy y/o un VPN.
+
+        \subsection{Servicios de terceros}
+
+        Debido a la complejidad de montar algunos sistemas y costo que esto conlleva se decidio tomar servicios de terceros, los 
+        cuales se nombran a continuación.
+
+        \subsubsection*{Servidor remoto}
+
+        Con la finalidad de disminuir el costo de mantenimiento de un servidor y los cambios en la infraestructura que esto llevaria se 
+        alquilara un servidor. Los precios de estos servidores rondan entre los $\$5000$ y $\$20000$ por mes, en este 
+        caso nos decantariamos por un servicio intermedio el cual cuesta $\$6000$. El provedor es \href{https://www.hostdime.com.ar/servidores-dedicados}{hostdime}.
+
+        \subsubsection*{Flota de camiones}
+
+        Dada la importacia de realizar un seguimiento de la flota de camiones y el bajo costo de alquilar un servicio.
+        Tomando como referencia $\$800$ por camion del servicio \href{https://galileosatelital.com/rastreo-vehicular-gps}{Galileo}.
         
-        \item[LAN] Una red inalámbrica por sector de oficinas. Se dedicara una red cableada en el sector de gerencia.
         
-        \item[WAN] %Definir ISP
 
-        \end{itemize}
 
-    \section*{Bahía Blanca - Centro de logística}
-        \begin{itemize}
-        
-        \item[LAN] Una red cableada para el sector de oficina.%Definir el alcance de la red de camaras
-        
-        \item[WAN] %Definir ISP
-
-        \end{itemize}
 
     \end{document}

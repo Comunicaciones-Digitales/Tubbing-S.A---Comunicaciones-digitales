@@ -66,8 +66,45 @@
         Dada la importacia de realizar un seguimiento de la flota de camiones y el bajo costo de alquilar un servicio.
         Tomando como referencia $\$800$ por camion del servicio \href{https://galileosatelital.com/rastreo-vehicular-gps}{Galileo}.
         
+    \section{Diseño de redes LAN}
+
+    \subsection*{Parque Central}
+
+        Los Switch a utilizar serán $2$ \href{https://articulo.mercadolibre.com.ar/MLA-714545399-switch-cisco-semi-admin-24-puertos-10100-2-giga-sf220-24-k9-_JM#position=34&type=item&tracking_id=4df4b6b4-1084-45cf-bab2-a07d312cf877}{Stiwch Cisco SF220-24-K9}
+        cuyo precio ronda lo $\$18000$.
+
+
+        Se deciden armar las siguienres VLAN's: 
+
+        \begin{enumerate}
+            \item Camaras de seguridad: ... 
+            \item Gerencia y reuniones y oficinas: ...  
+            \item Laboratorio: ...
+            \item Refrigerios y limpieza: El cual lleva una red WiFi sin VPN para que los empleados puedan entrar a redes sociales, y 
+                consumir contenido multimedia.
+            \item Planta industrial: Para lograr una intercoxion entre los PLC's.
+        \end{enumerate}
+
+        \textbf{CONSULTAR TEMA ROUTER !!!}
         
 
+    \subsection*{Parque industrial Rincón de los Sauces}
 
+    Se utiliza un switch Cisco SF220-24-K9. Y se implementaran las siguientes VLAN's: 
+
+    \begin{enumerate}
+        \item Camaras de seguridad: 
+        \item Oficinas 
+        \item Intrumentos: 
+        \item Refrigerio, limpieza y sanitarios: Red WiFi sin VPN. 
+    \end{enumerate}
+
+    \subsection*{Oficinas comerciales Neuquén}
+
+    Ver swich o router
+
+    \subsection*{Centro de logística Bahía Blanca}
+
+    Ver switch o router
 
     \end{document}

@@ -69,6 +69,8 @@
 
     \subsection*{Parque Central}
 
+        Del proveedor de internet se conecta directamente un cable a los switch a utilizar. (o desde el modem/router de la compañia?)
+
         Los Switch a utilizar serán $2$ \href{https://articulo.mercadolibre.com.ar/MLA-714545399-switch-cisco-semi-admin-24-puertos-10100-2-giga-sf220-24-k9-_JM#position=34&type=item&tracking_id=4df4b6b4-1084-45cf-bab2-a07d312cf877}{Stiwch Cisco SF220-24-K9}
         cuyo precio ronda lo $\$18000$.
 
@@ -76,15 +78,14 @@
         Se deciden armar las siguienres VLAN's: 
 
         \begin{enumerate}
-            \item Camaras de seguridad: ... 
-            \item Gerencia y reuniones y oficinas: ...  
-            \item Laboratorio: ...
+            \item Camaras de seguridad: van a tener su propio dispositivo server en el que guardar las grabaciones en discos rigidos. BUSCAR PRECIOS Y MODELO. De éste aparato se conecta un cable al switch.
+            \item Gerencia y reuniones y oficinas.
+            \item Laboratorio.
             \item Refrigerios y limpieza: El cual lleva una red WiFi sin VPN para que los empleados puedan entrar a redes sociales, y 
-                consumir contenido multimedia.
+                consumir contenido multimedia. Para esto se utilizará una acces point económico.
             \item Planta industrial: Para lograr una intercoxion entre los PLC's.
         \end{enumerate}
 
-        \textbf{CONSULTAR TEMA ROUTER !!!}
         
 
     \subsection*{Parque industrial Rincón de los Sauces}
@@ -100,10 +101,13 @@
 
     \subsection*{Oficinas comerciales Neuquén}
 
-    Ver swich o router
+    En esta oficina se utilizaran dos acces point para garantizar las conecciones y no tener que invertir en cableado. Se utilizará un acces point \textit{Ubiquiti Unifi Uap-lr} por cada piso.
+    \href{https://www.mercadolibre.com.ar/access-point-interior-ubiquiti-networks-unifi-ac-lr-ap-uap-ac-lr-blanco-1-unidad/p/MLA7953376?pdp_filters=category:MLA1700#searchVariation=MLA7953376&position=1&type=product&tracking_id=933ff74a-93c5-4a58-9a31-9fe5a3c5746e}{Link de compra}
+    
+    HACER VLAN?
 
     \subsection*{Centro de logística Bahía Blanca}
-
-    Ver switch o router  
+    Se utiliza la misma idea de para las cámaras de seguridad de parque industrial y al ser pocas personas la conectividad será directamente del router/modem 
+    de la compañia de internet. De esta forma se evita comprar un switch. 
 
     \end{document}

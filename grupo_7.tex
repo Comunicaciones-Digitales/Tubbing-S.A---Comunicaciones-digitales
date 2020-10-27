@@ -6,11 +6,13 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 
+\usepackage{color, colortbl}
 
 \usepackage{hyperref}
 \usepackage{float}
 \usepackage[a4paper,top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm,marginparwidth=1.75cm]{geometry}
 
+\definecolor{LightYellow}{RGB}{217, 177, 85}
 
 \title{Tubbing S.A \\ \small{Comunicaciones digitales} \\ \small{Universidad Nacional del Comahue} }
 \author{ 
@@ -67,9 +69,9 @@
         
     \section{Diseño de redes LAN}
 
-    \subsection*{Parque Central}
+    \subsection{Parque Industrial}
 
-        Del proveedor de internet se conecta directamente un cable a los switch a utilizar. (o desde el modem/router de la compañia?)
+        Del proveedor de internet se conecta directamente un cable a los switch a utilizar. 
 
         Los Switch a utilizar serán $2$ \href{https://articulo.mercadolibre.com.ar/MLA-714545399-switch-cisco-semi-admin-24-puertos-10100-2-giga-sf220-24-k9-_JM#position=34&type=item&tracking_id=4df4b6b4-1084-45cf-bab2-a07d312cf877}{Stiwch Cisco SF220-24-K9}
         cuyo precio ronda lo $\$18000$.
@@ -78,11 +80,15 @@
         Se deciden armar las siguienres VLAN's: 
 
         \begin{enumerate}
-            \item Camaras de seguridad: van a tener su propio dispositivo server en el que guardar las grabaciones en discos rigidos. BUSCAR PRECIOS Y MODELO. De éste aparato se conecta un cable al switch.
-            \item Gerencia y reuniones y oficinas.
-            \item Laboratorio.
+            \item Camaras de seguridad: van a tener su propio  
+            \href{https://articulo.mercadolibre.com.ar/MLA-658975031-dvr-xvr-dahua-8ch-canales-hd-1080n-cooper-pentahibrido-p2p-_JM#reco_item_pos=0&reco_backend=machinalis-seller-items-pdp&reco_backend_type=low_level&reco_client=vip-seller_items-above&reco_id=5b1ef3a8-b109-48d2-8d27-f2781047b33d}{dvr 8 canales}
+            en el que guardar las grabaciones en discos rigidos. De éste aparato se conecta un cable al switch.
+            \item Gerencia y reuniones y oficinas: Cuenta con una VLAN con VPN para evitar trafico no deseado.
+            \item Laboratorio: Idem anterior.
             \item Refrigerios y limpieza: El cual lleva una red WiFi sin VPN para que los empleados puedan entrar a redes sociales, y 
                 consumir contenido multimedia. Para esto se utilizará una acces point económico.
+                Se utilizara un 
+                \href{https://www.mercadolibre.com.ar/access-point-router-tp-link-archer-c80-negro-1-unidad/p/MLA15904250?pdp_filters=category:MLA430901%7CCONNECTION_TYPE:279958#searchVariation=MLA15904250&position=2&type=product&tracking_id=d8d0e6d5-6d3c-4d79-9478-ce1d3aa1232d}{access point de tp-link}.
             \item Planta industrial: Para lograr una intercoxion entre los PLC's.
         \end{enumerate}
 
@@ -92,15 +98,16 @@
         \end{figure}
         
 
-    \subsection*{Parque industrial Rincón de los Sauces}
+    \subsection{Parque industrial Rincón de los Sauces}
 
     Se utiliza un switch Cisco SF220-24-K9. Y se implementaran las siguientes VLAN's: 
 
     \begin{enumerate}
-        \item Camaras de seguridad: 
-        \item Oficinas 
-        \item Intrumentos: 
-        \item Refrigerio, limpieza y sanitarios: Red WiFi sin VPN. 
+        \item Camaras de seguridad: Al igual que en parque central se utilizara un 
+        \href{https://articulo.mercadolibre.com.ar/MLA-658974667-nvr-dvr-dahua-4-canales-penta-hdcvi-xvr-1a04-5-ch-5x1-qr-ps2-_JM#position=1&type=item&tracking_id=c1ba311d-e835-4420-9ba9-f01382834064}{dvr 4 canales} e ira conectado por un cable al switch principal.
+        \item Oficinas: Cuentan con su propia VLAN con VPN.
+        \item Intrumentos: Cuantan con una VLAN cableada con VPN.
+        \item Refrigerio, limpieza y sanitarios: Red WiFi sin VPN con acces point tp-link. 
     \end{enumerate}
 
     \begin{figure}[H]
@@ -108,19 +115,27 @@
         \includegraphics[width=0.6\textwidth]{Figure/Parque Industrial.png}
     \end{figure}
 
+ 
 
 
 
+    \subsection{Oficinas comerciales Neuquén}
 
-    \subsection*{Oficinas comerciales Neuquén}
+    En esta oficina se utilizaran dos acces point para garantizar las conecciones y no tener que invertir en cableado. Se utilizará un acces point 
+    \href{https://www.mercadolibre.com.ar/access-point-interior-ubiquiti-networks-unifi-ac-lr-ap-uap-ac-lr-blanco-1-unidad/p/MLA7953376?pdp_filters=category:MLA1700#searchVariation=MLA7953376&position=1&type=product&tracking_id=933ff74a-93c5-4a58-9a31-9fe5a3c5746e}{\textit{Ubiquiti Unifi Uap-lr}}
+    por cada piso.
 
-    En esta oficina se utilizaran dos acces point para garantizar las conecciones y no tener que invertir en cableado. Se utilizará un acces point \textit{Ubiquiti Unifi Uap-lr} por cada piso.
-    \href{https://www.mercadolibre.com.ar/access-point-interior-ubiquiti-networks-unifi-ac-lr-ap-uap-ac-lr-blanco-1-unidad/p/MLA7953376?pdp_filters=category:MLA1700#searchVariation=MLA7953376&position=1&type=product&tracking_id=933ff74a-93c5-4a58-9a31-9fe5a3c5746e}{Link de compra}
-    
-    HACER VLAN?
-
-    \subsection*{Centro de logística Bahía Blanca}
+    \subsection{Centro de logística Bahía Blanca}
     Se utiliza la misma idea de para las cámaras de seguridad de parque industrial y al ser pocas personas la conectividad será directamente del router/modem 
     de la compañia de internet. De esta forma se evita comprar un switch. 
+
+
+    \section{Presupuesto}
+
+    \begin{table}
+        \centering
+        \input{tables/table-presupuesto.tex}
+        \caption{Presupuesto en dolares.}
+    \end{table}
 
     \end{document}

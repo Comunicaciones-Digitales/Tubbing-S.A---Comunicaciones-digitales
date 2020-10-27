@@ -19,8 +19,8 @@
         Gatica, Isaias \\ \small{LautaroAndresSaez@gmail.com} \and 
         Millain, Gonzalo \\ \small{gonza.pm@outlook.com} \and
         Saez, Lautaro Andres \\ \small{IsaiasGatica1@gmail.com} 
-
 }
+
 \date{}
 
 \begin{document}
@@ -38,34 +38,34 @@
 
         \subsubsection*{LAN}
 
-        Cada area tendra su propia red LAN, la cual mas adelante se definira si sera por cable o WiFi dependiendo de las 
+        Cada área tendrá su propia red LAN, la cual mas adelante se definirá si será por cable o Wi-Fi dependiendo de las 
         prestaciones necesarias para cada lugar. Como primer medida adoptaremos el protocolo Ethernet por ser el mas utilizado.
 
         \subsubsection*{WAN}
 
-        Se tendra una red WAN que realize una interconexión entre todas las areas con la central que estara ubicada en Parque Industrial.
-        Esto permitira mediante una red Proxy/VPN facilitando el teletrabajo.
+        Se tendrá una red WAN que realice una interconexión entre todas las áreas con la central que estará ubicada en Parque Industrial.
+        Esto permitirá mediante una red Proxy/VPN facilitando el teletrabajo.
 
         \subsubsection*{Seguridad}
 
-        Para aumnetar la seguridad de la red WAN/LAN y tener un mayor control del uso de la red y quienes usan dicha red 
+        Para aumentar la seguridad de la red WAN/LAN y tener un mayor control del uso de la red y quienes usan dicha red 
         se decide implementar un servidor Proxy y/o un VPN.
 
         \subsection{Servicios de terceros}
 
-        Debido a la complejidad de montar algunos sistemas y costo que esto conlleva se decidio tomar servicios de terceros, los 
+        Debido a la complejidad de montar algunos sistemas y costo que esto conlleva se decidió tomar servicios de terceros, los 
         cuales se nombran a continuación.
 
         \subsubsection*{Servidor remoto}
 
-        Con la finalidad de disminuir el costo de mantenimiento de un servidor y los cambios en la infraestructura que esto llevaria se 
+        Con la finalidad de disminuir el costo de mantenimiento de un servidor y los cambios en la infraestructura que esto llevaría se 
         alquilara un servidor. Los precios de estos servidores rondan entre los $\$5000$ y $\$20000$ por mes, en este 
-        caso nos decantariamos por un servicio intermedio el cual cuesta $\$6000$. El provedor es \href{https://www.hostdime.com.ar/servidores-dedicados}{hostdime}.
+        caso nos decantaríamos por un servicio intermedio el cual cuesta $\$6000$. El proveedor es \href{https://www.hostdime.com.ar/servidores-dedicados}{\textit{hostdime}}.
 
         \subsubsection*{Flota de camiones}
 
-        Dada la importacia de realizar un seguimiento de la flota de camiones y el bajo costo de alquilar un servicio.
-        Tomando como referencia $\$800$ por camion del servicio \href{https://galileosatelital.com/rastreo-vehicular-gps}{Galileo}.
+        Dada la importancia de realizar un seguimiento de la flota de camiones y el bajo costo de alquilar un servicio.
+        Tomando como referencia $\$800$ por camión del servicio \href{https://galileosatelital.com/rastreo-vehicular-gps}{\textit{Galileo}}.
         
     \section{Diseño de redes LAN}
 
@@ -73,28 +73,28 @@
 
         Del proveedor de internet se conecta directamente un cable a los switch a utilizar. 
 
-        Los Switch a utilizar serán $2$ \href{https://articulo.mercadolibre.com.ar/MLA-714545399-switch-cisco-semi-admin-24-puertos-10100-2-giga-sf220-24-k9-_JM#position=34&type=item&tracking_id=4df4b6b4-1084-45cf-bab2-a07d312cf877}{Stiwch Cisco SF220-24-K9}
+        Los Switch a utilizar serán $2$ \href{https://articulo.mercadolibre.com.ar/MLA-714545399-switch-cisco-semi-admin-24-puertos-10100-2-giga-sf220-24-k9-_JM#position=34&type=item&tracking_id=4df4b6b4-1084-45cf-bab2-a07d312cf877}{\textit{Cisco SF220-24-K9}}
         cuyo precio ronda lo $\$18000$.
 
 
-        Se deciden armar las siguienres VLAN's: 
+        Se deciden armar las siguientes VLAN's: 
 
         \begin{enumerate}
-            \item Camaras de seguridad: van a tener su propio  
-            \href{https://articulo.mercadolibre.com.ar/MLA-658975031-dvr-xvr-dahua-8ch-canales-hd-1080n-cooper-pentahibrido-p2p-_JM#reco_item_pos=0&reco_backend=machinalis-seller-items-pdp&reco_backend_type=low_level&reco_client=vip-seller_items-above&reco_id=5b1ef3a8-b109-48d2-8d27-f2781047b33d}{dvr 8 canales}
-            en el que guardar las grabaciones en discos rigidos. De éste aparato se conecta un cable al switch.
+            \item Cámaras de seguridad: van a tener su propio dvr 
+            \href{https://articulo.mercadolibre.com.ar/MLA-658975031-dvr-xvr-dahua-8ch-canales-hd-1080n-cooper-pentahibrido-p2p-_JM#reco_item_pos=0&reco_backend=machinalis-seller-items-pdp&reco_backend_type=low_level&reco_client=vip-seller_items-above&reco_id=5b1ef3a8-b109-48d2-8d27-f2781047b33d}{\textit{Dahua de 8 canales}}
+            en el que guardar las grabaciones en discos rígidos. De éste aparato se conecta un cable al switch.
             \item Gerencia y reuniones y oficinas: Cuenta con una VLAN con VPN para evitar trafico no deseado.
             \item Laboratorio: Idem anterior.
-            \item Refrigerios y limpieza: El cual lleva una red WiFi sin VPN para que los empleados puedan entrar a redes sociales, y 
-                consumir contenido multimedia. Para esto se utilizará una acces point económico.
-                Se utilizara un 
-                \href{https://www.mercadolibre.com.ar/access-point-router-tp-link-archer-c80-negro-1-unidad/p/MLA15904250?pdp_filters=category:MLA430901%7CCONNECTION_TYPE:279958#searchVariation=MLA15904250&position=2&type=product&tracking_id=d8d0e6d5-6d3c-4d79-9478-ce1d3aa1232d}{access point de tp-link}.
-            \item Planta industrial: Para lograr una intercoxion entre los PLC's.
+            \item Refrigerios y limpieza: El cual lleva una red Wi-Fi sin VPN para que los empleados puedan entrar a redes sociales, y 
+                consumir contenido multimedia. Para esto se utilizará una access point económico.
+                Se utilizara un access point 
+                \href{https://www.mercadolibre.com.ar/access-point-router-tp-link-archer-c80-negro-1-unidad/p/MLA15904250?pdp_filters=category:MLA430901%7CCONNECTION_TYPE:279958#searchVariation=MLA15904250&position=2&type=product&tracking_id=d8d0e6d5-6d3c-4d79-9478-ce1d3aa1232d}{\textit{tp-link}}.
+            \item Planta industrial: Para lograr una interconexión entre los PLC's.
         \end{enumerate}
 
         \begin{figure}[H]
             \centering
-            \includegraphics[width=\textwidth]{Figure/Planta de parque.png}
+            \includegraphics[width=\textwidth]{Figure/Planta_de_parque.png}
         \end{figure}
         
 
@@ -103,16 +103,16 @@
     Se utiliza un switch Cisco SF220-24-K9. Y se implementaran las siguientes VLAN's: 
 
     \begin{enumerate}
-        \item Camaras de seguridad: Al igual que en parque central se utilizara un 
-        \href{https://articulo.mercadolibre.com.ar/MLA-658974667-nvr-dvr-dahua-4-canales-penta-hdcvi-xvr-1a04-5-ch-5x1-qr-ps2-_JM#position=1&type=item&tracking_id=c1ba311d-e835-4420-9ba9-f01382834064}{dvr 4 canales} e ira conectado por un cable al switch principal.
+        \item Cámaras de seguridad: Al igual que en parque central se utilizara un dvr 
+        \href{https://articulo.mercadolibre.com.ar/MLA-658974667-nvr-dvr-dahua-4-canales-penta-hdcvi-xvr-1a04-5-ch-5x1-qr-ps2-_JM#position=1&type=item&tracking_id=c1ba311d-e835-4420-9ba9-f01382834064}{\textit{Dahua 4 canales}} e ira conectado por un cable al switch principal.
         \item Oficinas: Cuentan con su propia VLAN con VPN.
-        \item Intrumentos: Cuantan con una VLAN cableada con VPN.
-        \item Refrigerio, limpieza y sanitarios: Red WiFi sin VPN con acces point tp-link. 
+        \item Instrumentos: Cuentan con una VLAN cableada con VPN.
+        \item Refrigerio, limpieza y sanitarios: Red Wi-Fi sin VPN con access point tp-link. 
     \end{enumerate}
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.6\textwidth]{Figure/Parque Industrial.png}
+        \includegraphics[width=0.6\textwidth]{Figure/Parque_Industrial.png}
     \end{figure}
 
  
@@ -121,21 +121,21 @@
 
     \subsection{Oficinas comerciales Neuquén}
 
-    En esta oficina se utilizaran dos acces point para garantizar las conecciones y no tener que invertir en cableado. Se utilizará un acces point 
+    En esta oficina se utilizaran dos access point para garantizar las conexiones y no tener que invertir en cableado. Se utilizará un acces point 
     \href{https://www.mercadolibre.com.ar/access-point-interior-ubiquiti-networks-unifi-ac-lr-ap-uap-ac-lr-blanco-1-unidad/p/MLA7953376?pdp_filters=category:MLA1700#searchVariation=MLA7953376&position=1&type=product&tracking_id=933ff74a-93c5-4a58-9a31-9fe5a3c5746e}{\textit{Ubiquiti Unifi Uap-lr}}
     por cada piso.
 
     \subsection{Centro de logística Bahía Blanca}
     Se utiliza la misma idea de para las cámaras de seguridad de parque industrial y al ser pocas personas la conectividad será directamente del router/modem 
-    de la compañia de internet. De esta forma se evita comprar un switch. 
-
+    del proveedor de internet. De esta forma se evita comprar un switch. 
+    
 
     \section{Presupuesto}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \input{tables/table-presupuesto.tex}
-        \caption{Presupuesto en dolares.}
+        \caption{Presupuesto en dólares.}
     \end{table}
 
     \end{document}

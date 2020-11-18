@@ -142,7 +142,7 @@
     \section{Diseño de redes IP}
 
     La numeración a implementar para las redes IP es 192.168.X y se utilizara siempre la mascara 255.255.255.0, donde X será un número identificatorio de 
-    cada sucursal. 
+    cada sucursal.
 
     \begin{table}
         \centering
@@ -151,7 +151,62 @@
     \end{table}
 
 
+    \section{Cableado}
 
+    A continuación se muestras las tablas para cada sucursal, se recomienda tercializar el servicio de 
+    instalación a \href{https://blgnet.com.ar/home/index.php#contact}{BLGNET}.
+
+    \subsection{Parque industrial}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline Nombre & Modelo & Cantidad & Precio por unidad [u$\$$d] \\ 
+            \hline Switch Cisco & Sf220-24-k9 & 2 & $225$ \\
+            \hline Patchera 24 puertos & - & 2 & $100$ \\ 
+            \hline Cable utp 6 & - & - & $1.75$ por metro  \\
+            \hline Roseta & - & 30 & $3$  \\
+            \hline
+        \end{tabular}
+    \end{table}
+    
+    \subsection{Parque industrial Rincón de los Sauces}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline Nombre & Modelo & Cantidad & Precio por unidad [u$\$$d] \\ 
+            \hline Switch Cisco & Sf220-24-k9 & 1 & $225$ \\
+            \hline Patchera 24 puertos & - & 1 & $100$ \\ 
+            \hline Cable utp 6 & - & - & $1.75$ por metro  \\
+            \hline Roseta & - & 10 & $3$  \\
+            \hline
+        \end{tabular}
+    \end{table}
+    
+    \subsection{Oficinas comerciales Neuquén}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline Nombre & Modelo & Cantidad & Precio por unidad [u$\$$d] \\  
+            \hline Cable utp 6 & - & - & $1.75$ por metro  \\
+            \hline Access point Ubiquiti & AC LR AP & 2 & $168.6$\\
+            \hline
+        \end{tabular}
+    \end{table}
+
+    \subsection{Centro de logística Bahía Blanca}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|c|}
+            \hline Nombre & Modelo & Cantidad & Precio por unidad [u$\$$d] \\  
+            \hline Cable utp 6 & - & - & $1.75$ por metro  \\
+            \hline Roseta & - & 3 & $3$  \\
+            \hline
+        \end{tabular}
+    \end{table}
 
 
     \section{Presupuesto}
@@ -159,7 +214,7 @@
     \begin{table}[H]
         \centering
         \input{tables/table-presupuesto.tex}
-        \caption{Presupuesto tentativo en dólares (27/10/2020).}
+        \caption{Presupuesto tentativo en dólares (17/11/2020).}
     \end{table}
 
     \end{document}

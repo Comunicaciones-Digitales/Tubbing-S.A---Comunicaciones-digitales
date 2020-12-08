@@ -209,6 +209,21 @@
     \end{table}
 
 
+    \section{WAN}
+    Con la finalidad de otorgar un servicio estable y profesional, se buscará contratar la red WAN a tercero, en específico una SD-WAN que es la tecnología mas actual. Si bien en Argentina aun no se encuentra variedad de prestadores, la mejor opción que se presenta es la de \textbf{Telefónica}.
+
+        \subsection{SD-WAN Telefónica}
+        Entre las opciones, se eligió la \href{https://empresas.telefonica.com.ar/cloud-computing/sdwan/sdwan}{Advantage SD - WAN Avanzado} por su no
+        limitación en la cantidad de VLAN y la topología Full Mesh. Además incluye las características del plan básico como QoS, ruteo por aplicación o en seguridad IPSEC entre otras características. 
+        En cuanto a la configuración para cada capa se propone:
+        \begin{itemize}
+            \item El protocolo de enrutación elegido es \textbf{Enrutamiento dinámico por estado de enlace}
+            \item El control de congestión que se propone es el \textbf{Control por admisión} negociando un acuerdo entre el host y la subred de los parámetros de transmisión.
+            \item En cuanto a la calidad de servicio QoS se utilizará la ténica de \textbf{Modelado de tráfico} y tratando de implementar a su vez la técnica de \textbf{Reservación de recursos}.
+        \end{itemize}
+
+
+
     \section{Presupuesto}
 
     \begin{table}[H]

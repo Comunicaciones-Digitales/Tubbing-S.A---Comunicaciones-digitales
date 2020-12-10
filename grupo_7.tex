@@ -222,6 +222,47 @@
             \item En cuanto a la calidad de servicio QoS se utilizará la ténica de \textbf{Modelado de tráfico} y tratando de implementar a su vez la técnica de \textbf{Reservación de recursos}.
         \end{itemize}
 
+    \section{Seguridad}
+    En términos generales de seguridad se seguiran las estrategias propuestas por la bibliografia. Estan son incluir:
+    \begin{itemize}
+        \item Firewall
+        \item VPN
+        \item IPSEC con ESP (\textit{Encapsulating Security Payload}) en modo tunel.
+    \end{itemize}
+
+    Actualmente el contratar un buen Firewall nos da la posibilidad de configurar los restantes items entre muchas otras ventajas. Por esto veremos a continuación tres Firewall
+    recomendados para empresas: \footnote{https://tecnoloco.istocks.club/los-mejores-firewalls-para-pequenas-empresas-en-2020/2020-02-01/}
+
+
+    \begin{enumerate}
+        \item  \href{https://www.ui.com/edgemax/edgerouter/}{Ubiquiti EdgeRouter}: Si bien no es un Firewall en si, este router tiene prestaciones de seguridad que apuntan a pequeñas
+        empresas. Se podría clasificar como un Firewall simple, aun así al ser de \textit{Ubiquiti} no da seguridad y por lo visto en su web proporciona 
+        un control intuitivo y completo con aplicaciones web o de celular.
+        \item \href{https://meraki.cisco.com/lib/pdf/meraki_datasheet_mx_es.pdf}{Meraki MX}: Ya un Firewall mas profesional y con la garantia de ser de Cisco es la gama de Meraki MX.
+        Como vemos en el datasheet asociado, existen varios modelos en que se diferencian principalmente por la cantidad de interfaces LAN/WAN, el rendimiento en seguridad y firewall, la
+        cantidad de VPN concurrentes y el tipo de montaje. 
+        \item \href{https://www.fortinet.com/content/dam/fortinet/assets/white-papers/wp-security-fabric.pdf}{Fortinet Security Fabric}: Similar al Firewall de Cisco, muy profesional y
+        en líderes de seguridad en la red como Fortinet. Las especificaciones son muy similares al anterior y tambien varían segun las características anteriores. Sin embargo, un apartado 
+        intersante es la implementación de inteligencia artificial para mejorar la seguridad.
+    \end{enumerate}
+
+    Cabe destacar que tanto los Firewall de Cisco como los de Fortinet, en particular el modelo 
+    \href{https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_80E_Series.pdf}{FortiGate 80E} permiten configurar una SD-WAN. Esto nos brinda la 
+    posibilidad de unificar los servicios y prescindir del servicio elegido anteriormente de Telefónica. En este punto nosotros proponemos....
+
+
+    \subsection{Telefonia IP}
+    Para la adquisión de telefonia IP en la empresa, se decidió optar por el servicio de \textit{IPTEL}. En particular nos decantamos por la
+    \href{https://www.iptel.com.ar/centrales-telefonicas/virtuales/}{telefonia IP virtual} ya que nos da las mismas funcionalidades que una físca y además obtenemos
+    características importantes como:
+    \begin{itemize}
+        \item Escalabilidad
+        \item Ahorro económico
+        \item Movilidad
+        \item Internos remotos (Softphone)
+    \end{itemize}
+
+    Se eligío esta empresa por ser Argentina y contar con licencia de la CNC (Comisión Nacional de Comunicaciones).
 
 
     \section{Presupuesto}

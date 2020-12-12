@@ -119,7 +119,7 @@
 
     \subsection{Oficinas comerciales Neuquén}
 
-    En esta oficina se utilizaran dos access point para garantizar las conexiones y no tener que invertir en cableado. Se utilizará un acces point 
+    En esta oficina se utilizaran dos access point para garantizar las conexiones y no tener que invertir en cableado. Se utilizará un access point 
     \href{https://www.mercadolibre.com.ar/access-point-interior-ubiquiti-networks-unifi-ac-lr-ap-uap-ac-lr-blanco-1-unidad/p/MLA7953376?pdp_filters=category:MLA1700#searchVariation=MLA7953376&position=1&type=product&tracking_id=933ff74a-93c5-4a58-9a31-9fe5a3c5746e}{\textit{Ubiquiti Unifi Uap-lr}}
     por cada piso.
 
@@ -141,8 +141,7 @@
 
     \section{Diseño de redes IP}
 
-    La numeración a implementar para las redes IP es 192.168.X y se utilizara siempre la mascara 255.255.255.0, donde X será un número identificatorio de 
-    cada sucursal.
+    La numeración a implementar para las redes IP es 192.168.X y se utilizara siempre la mascara 255.255.255.0, donde X será un número identificatorio de cada sucursal.
 
     \begin{table}
         \centering
@@ -153,8 +152,7 @@
 
     \section{Cableado}
 
-    A continuación se muestras las tablas para cada sucursal, se recomienda tercializar el servicio de 
-    instalación a \href{https://blgnet.com.ar/home/index.php#contact}{BLGNET}.
+    A continuación se muestras las tablas para cada sucursal, se recomienda tercerizar el servicio de instalación a \href{https://blgnet.com.ar/home/index.php#contact}{BLGNET}.
 
     \subsection{Parque industrial}
 
@@ -213,17 +211,41 @@
     Con la finalidad de otorgar un servicio estable y profesional, se buscará contratar la red WAN a tercero, en específico una SD-WAN que es la tecnología mas actual. Si bien en Argentina aun no se encuentra variedad de prestadores, la mejor opción que se presenta es la de \textbf{Telefónica}.
 
         \subsection{SD-WAN Telefónica}
-        Entre las opciones, se eligió la \href{https://empresas.telefonica.com.ar/cloud-computing/sdwan/sdwan}{Advantage SD - WAN Avanzado} por su no
-        limitación en la cantidad de VLAN y la topología Full Mesh. Además incluye las características del plan básico como QoS, ruteo por aplicación o en seguridad IPSEC entre otras características. 
+        Entre las opciones, se eligió la \href{https://empresas.telefonica.com.ar/cloud-computing/sdwan/sdwan}{Advantage SD - WAN Avanzado} por su no limitación en la cantidad de VLAN y la topología Full Mesh. Además incluye las características del plan básico como QoS, ruteo por aplicación o en seguridad IPSEC entre otras características. 
         En cuanto a la configuración para cada capa se propone:
         \begin{itemize}
-            \item El protocolo de enrutación elegido es \textbf{Enrutamiento dinámico por estado de enlace}
+            \item El protocolo de enrutamiento elegido es \textbf{Enrutamiento dinámico por estado de enlace}
             \item El control de congestión que se propone es el \textbf{Control por admisión} negociando un acuerdo entre el host y la subred de los parámetros de transmisión.
-            \item En cuanto a la calidad de servicio QoS se utilizará la ténica de \textbf{Modelado de tráfico} y tratando de implementar a su vez la técnica de \textbf{Reservación de recursos}.
+            \item En cuanto a la calidad de servicio QoS se utilizará la técnica de \textbf{Modelado de tráfico} y tratando de implementar a su vez la técnica de \textbf{Reservación de recursos}.
         \end{itemize}
 
+    \section{Aplicaciones}
+    
+        \subsection{DNS}
+        Podemos registrar un nombre de dominio \textit{.ar} por medio de \href{https://nic.ar/es/dominios/aranceles}{NIC Argentina}.
+
+        %Aca tendriamos que mover el tema del hosting de la pagina web (servidor remoto). Ver el tema del mantenimiento de la misma, si se va a utilizar para contenido estatico o dinamico.
+
+        \subsection{Email}
+        Se busco un proveedor de correo, con posibilidad de utilizar nuestro nombre de dominio personalizado. Se eligió \href{https://www.microsoft.com/es-ar/microsoft-365/business}{Microsoft 365 para empresas}, este nos permite otras soluciones de almacenamiento de archivos y de otras aplicaciones varias.
+
+        \subsection{Telefonia IP}
+        Para la adquisión de telefonia IP en la empresa, se decidió optar por el servicio de \textit{IPTEL}. En particular nos decantamos por la
+        \href{https://www.iptel.com.ar/centrales-telefonicas/virtuales/}{telefonia IP virtual} ya que nos da las mismas funcionalidades que una físca y además obtenemos
+        características importantes como:
+        \begin{itemize}
+            \item Escalabilidad
+            \item Ahorro económico
+            \item Movilidad
+            \item Internos remotos (Softphone)
+        \end{itemize}
+
+        Se eligío esta empresa por ser Argentina y contar con licencia de la CNC (Comisión Nacional de Comunicaciones).
+
     \section{Seguridad}
-    En términos generales de seguridad se seguiran las estrategias propuestas por la bibliografia. Estan son incluir:
+    %Que se necesita en terminos de seguridad al utilizar sdwan (ya tengo IPsec bajo sdwan)
+    %Poner aca lo del servidor local para autenticacion (Uno por cada LAN, excepto tal vez BahiaBlanca)
+    En términos generales de seguridad se seguirán las estrategias propuestas por la bibliografía. Estas son incluir:
     \begin{itemize}
         \item Firewall
         \item VPN
@@ -232,7 +254,6 @@
 
     Actualmente el contratar un buen Firewall nos da la posibilidad de configurar los restantes items entre muchas otras ventajas. Por esto veremos a continuación tres Firewall
     recomendados para empresas: \footnote{https://tecnoloco.istocks.club/los-mejores-firewalls-para-pequenas-empresas-en-2020/2020-02-01/}
-
 
     \begin{enumerate}
         \item  \href{https://www.ui.com/edgemax/edgerouter/}{Ubiquiti EdgeRouter}: Si bien no es un Firewall en si, este router tiene prestaciones de seguridad que apuntan a pequeñas
@@ -249,21 +270,6 @@
     Cabe destacar que tanto los Firewall de Cisco como los de Fortinet, en particular el modelo 
     \href{https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/FortiGate_80E_Series.pdf}{FortiGate 80E} permiten configurar una SD-WAN. Esto nos brinda la 
     posibilidad de unificar los servicios y prescindir del servicio elegido anteriormente de Telefónica. En este punto nosotros proponemos....
-
-
-    \subsection{Telefonia IP}
-    Para la adquisión de telefonia IP en la empresa, se decidió optar por el servicio de \textit{IPTEL}. En particular nos decantamos por la
-    \href{https://www.iptel.com.ar/centrales-telefonicas/virtuales/}{telefonia IP virtual} ya que nos da las mismas funcionalidades que una físca y además obtenemos
-    características importantes como:
-    \begin{itemize}
-        \item Escalabilidad
-        \item Ahorro económico
-        \item Movilidad
-        \item Internos remotos (Softphone)
-    \end{itemize}
-
-    Se eligío esta empresa por ser Argentina y contar con licencia de la CNC (Comisión Nacional de Comunicaciones).
-
 
     \section{Presupuesto}
 

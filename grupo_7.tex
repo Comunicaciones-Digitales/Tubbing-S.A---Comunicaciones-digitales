@@ -209,7 +209,7 @@
 
     \section{WAN}
     Con la finalidad de otorgar un servicio estable y profesional, se buscará contratar la red WAN a tercero, en específico una SD-WAN que es la tecnología mas actual. Si bien en Argentina aun no se encuentra variedad de prestadores, la mejor opción que se presenta es la de \textbf{Telefónica}.
-
+    %(SDWAN) Podriamos en vez de utilizar routers de borde, directamente dejar solo switches ahi? Nos ahorramos el costo de cada router
         \subsection{SD-WAN Telefónica}
         Entre las opciones, se eligió la \href{https://empresas.telefonica.com.ar/cloud-computing/sdwan/sdwan}{Advantage SD - WAN Avanzado} por su no limitación en la cantidad de VLAN y la topología Full Mesh. Además incluye las características del plan básico como QoS, ruteo por aplicación o en seguridad IPSEC entre otras características. 
         En cuanto a la configuración para cada capa se propone:
@@ -224,7 +224,7 @@
         \subsection{DNS}
         Podemos registrar un nombre de dominio \textit{.ar} por medio de \href{https://nic.ar/es/dominios/aranceles}{NIC Argentina}.
 
-        %Aca tendriamos que mover el tema del hosting de la pagina web (servidor remoto). Ver el tema del mantenimiento de la misma, si se va a utilizar para contenido estatico o dinamico.
+        %Aca tendriamos que mover el tema del hosting de la pagina web (servidor remoto). Ver el tema del mantenimiento de la misma, si se va a utilizar para contenido estatico o dinamico. Vale la pena usar una plataforma de ecommerce?. 
 
         \subsection{Email}
         Se busco un proveedor de correo, con posibilidad de utilizar nuestro nombre de dominio personalizado. Se eligió \href{https://www.microsoft.com/es-ar/microsoft-365/business}{Microsoft 365 para empresas}, este nos permite otras soluciones de almacenamiento de archivos y de otras aplicaciones varias.
@@ -245,6 +245,7 @@
     \section{Seguridad}
     %Que se necesita en terminos de seguridad al utilizar sdwan (ya tengo IPsec bajo sdwan)
     %Poner aca lo del servidor local para autenticacion (Uno por cada LAN, excepto tal vez BahiaBlanca)
+    
     En términos generales de seguridad se seguirán las estrategias propuestas por la bibliografía. Estas son incluir:
     \begin{itemize}
         \item Firewall

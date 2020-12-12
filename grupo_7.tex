@@ -242,6 +242,35 @@
 
         Se eligío esta empresa por ser Argentina y contar con licencia de la CNC (Comisión Nacional de Comunicaciones).
 
+
+    \section{Servicios}
+
+        Se decidio alquilar el servidor a \href{https://www.hostdime.com.ar/}{Hostdime}, el cual nos brinda con CentOs 7 (sin costo adicional), 
+        hostdime nos pertime tener una amplia personalización del servidor contratado, para este caso elegimos las siguientes caracteristicas: 
+
+        \begin{table}[H]
+            \centering
+            \input{tables/services.tex}
+        \end{table}
+
+        Para realizar la conexión entre el servidor y los empleados se propone crear una aplicación de la empresa que se encargue de manejar dicho trafico. 
+        Para ello se deben trabajar diferentes aspectos: 
+
+        \subsection{Persistencia de los datos}
+
+        Debido a que será necesario manejar usuarios se debe instalar una base de datos en el servidor, puede ser SQL o no SQL.
+        Aunque se recomienda una base de datos de tipo SQL como MySQL, ya que permite tener almacenada de información por tablas 
+        y debido a que la cantidad de consultas no será excesiva las consultas no serán lentas. 
+
+        \subsection{Interfaz servidor-usuario}
+
+        En el mundo Web es muy comun tener que conectar una base de datos con una aplicación, con la finalidad de aumentar la seguridad las 
+        consultas a la base de datos se hacen mediante un intermediario al que se denomina API, esto permite que las consultas 
+        se encuentren bien estructuradas y sea menos probable que se vea dañada la base de datos. En la actualidad la API's más utilizadas son 
+        las de tipo \href{https://rockcontent.com/es/blog/api-rest/#:~:text=Antes%20de%20introducir%20el%20concepto,comunicaci%C3%B3n%20de%20datos%20entre%20aplicaciones.}{REST} las cuales son sencillas de construir, y se pueden crear en una amplia cantidad de lenguajes (PHP, Javascript, Python, Java, Go).
+
+    
+
     \section{Seguridad}
     %Que se necesita en terminos de seguridad al utilizar sdwan (ya tengo IPsec bajo sdwan)
     %Poner aca lo del servidor local para autenticacion (Uno por cada LAN, excepto tal vez BahiaBlanca)
@@ -276,7 +305,7 @@
     \begin{table}[H]
         \centering
         \input{tables/table-presupuesto.tex}
-        \caption{Presupuesto tentativo en dólares (17/11/2020).}
+        \caption{Presupuesto tentativo en dólares (12/12/2020).}
     \end{table}
 
     \end{document}
